@@ -108,13 +108,10 @@ class AutoTabsScaffold extends StatelessWidget {
           primary: primary,
           appBar: appBarBuilder == null
               ? null
-              : PreferredSize(
-                  child: appBarBuilder!(
+              : appBarBuilder!(
                     context,
                     tabsRouter,
-                  ),
-                  preferredSize: Size.fromHeight(kToolbarHeight),
-                ),
+                  ) as PreferredSizeWidget,
           body: builder == null
               ? FadeTransition(opacity: animation, child: child)
               : builder!(
