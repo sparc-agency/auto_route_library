@@ -15,9 +15,10 @@ dependencies:
   code_builder: ^4.0.0
   dart_style: ^2.0.1
   auto_route:
-#    ^2.1.0
-    path: ../auto_route
-
+    git:
+      url: https://github.com/sparc-agency/auto_route_library.git
+      ref: bugfix-custom-appbar-height
+      path: auto_route
 
 dev_dependencies:
   source_gen_test:
